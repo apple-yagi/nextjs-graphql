@@ -1,0 +1,14 @@
+version: "3.9"
+volumes:
+  db-store:
+services:
+  db:
+    image: postgres:15.1
+    ports:
+      - 5432:5432
+    volumes:
+      - db-store:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=nextjs_graphql
+      - POSTGRES_USER=nextjs
+      - POSTGRES_PASSWORD=password
