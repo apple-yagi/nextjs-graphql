@@ -1,0 +1,4 @@
+{
+  "*.{js,jsx,ts,tsx}": ["rome format --write", "rome check"],
+  "*.prisma": ["prisma format"]
+}
